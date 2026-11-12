@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.title("Salomlashuv ilovasi")
+st.title("Bulutli kalkulyator")
 
-ism = st.text_input("Ismingizni kiriting")
+a = st.number_input("Birinchi son", value=0)
+b = st.number_input("Ikkinchi son", value=0)
 
-if st.button("Salomlashish"):
-    if ism.strip():
-        st.success(f"Assalomu alaykum, {ism}!")
-    else:
-        st.warning("Avval ismingizni kiriting.")
+if st.button("Hisoblash"):
+    st.write("Yig'indi:", a + b)
+    st.write("Ayirma:", a - b)
+    st.write("Ko'paytma:", a * b)
