@@ -1,21 +1,27 @@
 
 import streamlit as st
 
-st.set_page_config(page_title="Talabaning shaxsiy bulutli kalkulyatori")
+st.set_page_config(page_title="Talaba PaaS ilovasi")
 
-st.title("Talabaning shaxsiy bulutli kalkulyatori")
-st.header("Bulutli texnologiyalar fani")
-st.subheader("Amaliy mashg'ulot")
+st.title("Talabaning bulutli ilovasi")
+st.header("Bulutli texnologiyalar")
+st.info("GitHub va Streamlit asosidagi loyiha")
 
-st.write("GitHub va Streamlit platformalari")
+st.subheader("Talaba ma'lumotlari")
 
-st.info("Bu ilova bulutda ishlamoqda.")
-st.success("Dastur muvaffaqiyatli ishga tushdi!")
-st.warning("Ma'lumotlarni tekshirib kiriting.")
+ism = st.text_input("Ismingizni kiriting")
+guruh = st.text_input("Guruhingizni kiriting")
+
+if st.button("Talaba ma'lumotlari"):
+    if ism.strip() and guruh.strip():
+        st.success(f"Salom, {ism}!")
+        st.write(f"Guruhingiz: {guruh}")
+    else:
+        st.warning("Barcha maydonlarni to'ldiring.")
 
 st.divider()
 
-st.subheader("Xavfsiz bulutli kalkulyator")
+st.subheader("Bulutli kalkulyator")
 
 a = st.number_input("Birinchi son", value=0.0)
 b = st.number_input("Ikkinchi son", value=0.0)
@@ -40,4 +46,5 @@ if st.button("Hisoblash"):
 
     st.success(f"Natija: {natija:g}")
 
+st.divider()
 st.caption("Bulutli texnologiyalar amaliy mashg'uloti")
