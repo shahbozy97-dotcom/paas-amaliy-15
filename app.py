@@ -1,4 +1,11 @@
 import streamlit as st
 
-st.title("Mening birinchi bulutli ilovam")
-st.write("Bulutli texnologiyalar fani")
+st.title("PaaS bulutli ilovasi")
+st.header("Bulutli texnologiyalar")
+st.subheader("Amaliy mashg'ulot")
+
+st.write("GitHub va Streamlit platformalari")
+
+st.info("Bu ilova bulutda ishlamoqda.")
+st.success("Dastur muvaffaqiyatli ishga tushdi!")
+st.warning("Ma'lumotlarni tekshirib kiriting.")
