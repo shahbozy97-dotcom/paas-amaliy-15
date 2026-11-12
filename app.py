@@ -1,11 +1,13 @@
 import streamlit as st
 
-st.title("Talabaning bulutli ilovasi")
-st.header("Bulutli texnologiyalar fani")
-st.subheader("Amaliy mashg'ulot")
+st.title("Talaba ma'lumotlari")
 
-st.write("GitHub va Streamlit platformalari")
+ism = st.text_input("Ismingizni kiriting")
+guruh = st.text_input("Guruhingizni kiriting")
+fan = st.text_input("Fan nomini kiriting")
 
-st.info("Bu ilova bulutda ishlamoqda.")
-st.success("Dastur muvaffaqiyatli ishga tushdi!")
-st.warning("Ma'lumotlarni tekshirib kiriting.")
+st.subheader("Kiritilgan ma'lumotlar")
+
+st.write("Talaba ismi:", ism)
+st.write("Guruh:", guruh)
+st.write("Fan:", fan)
