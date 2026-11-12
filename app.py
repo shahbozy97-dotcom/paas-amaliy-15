@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="PaaS bulutli ilovasi")
+
 st.title("PaaS bulutli ilovasi")
 st.header("Bulutli texnologiyalar")
 st.subheader("Amaliy mashg'ulot")
